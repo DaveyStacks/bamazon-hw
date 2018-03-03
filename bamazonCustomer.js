@@ -1,6 +1,8 @@
-
+require("dotenv").config();
+var keys = require("./keys");
 var inquirer = require('inquirer');
 var mysql = require('mysql');
+var dbPass = keys.databasePassword.pass_word;
 let ballId;
 let quantityOrdered;
 var questions = [
@@ -20,7 +22,7 @@ var connection = mysql.createConnection({
     host: 'localhost',
     port: '3306',
     user: 'root',
-    password: 'dcoul7777',
+    password: dbPass,
     database: 'bamazon'
 });
 
