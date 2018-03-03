@@ -40,8 +40,6 @@ function askThem() {
     inquirer.prompt(questions).then(answers => {
         ballId = parseInt(answers.product_selection);
         quantityOrdered = parseInt(answers.quantity);
-        console.log(ballId);
-        console.log(quantityOrdered);
         checkStock();
     });
 
@@ -51,9 +49,9 @@ function checkStock() {
     var query = "SELECT stock_quantity, price, item_id FROM products WHERE ?";
     connection.query(query, { item_id: ballId }, function (err, res) {
         if (res[0].stock_quantity < quantityOrdered) {
-            console.log("Insufficient Stock!");
-            console.log("Please try a new amount and we might be able to fill your order!");
-            askThem();
+            console.log("************************************************ Insufficient Stock! ************************************************");
+            console.log("************************************************ Please try a new amount and we might be able to fill your order! ************************************************");
+            selectAll();
         }
         else {
             console.log("Your order has been placed!!")
