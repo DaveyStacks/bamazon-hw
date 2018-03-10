@@ -1,0 +1,25 @@
+{
+  "name": "bamazon-hw",
+  "version": "1.0.0",
+  "description": "mysql server hw",
+  "main": "bamazonCustomer.js",
+  "dependencies": {
+    "dotenv": "^5.0.1",
+    "inquirer": "^5.1.0",
+    "mysql": "^2.15.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DaveyStacks/bamazon-hw.git"
+  },
+  "author": "David R Coulombe (David.coulombe7@gmail.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DaveyStacks/bamazon-hw/issues"
+  },
+  "homepage": "https://github.com/DaveyStacks/bamazon-hw#readme"
+}
